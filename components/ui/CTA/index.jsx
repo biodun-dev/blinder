@@ -1,7 +1,7 @@
-import Image from "next/image"
-import ctaImage from "../../../public/cta-image.jpg"
-import SectionWrapper from "../../SectionWrapper"
-import NavLink from "../NavLink"
+import Image from "next/image";
+import ctaImage from "../../../public/cta-image.jpg";
+import SectionWrapper from "../../SectionWrapper";
+import NavLink from "../NavLink";
 
 const CTA = () => {
     return (
@@ -9,26 +9,37 @@ const CTA = () => {
             <div className="custom-screen">
                 <div className="items-center gap-x-12 lg:flex">
                     <div className="flex-1 sm:hidden lg:block">
-                        <Image src={ctaImage} className="rounded-lg md:max-w-lg" alt="Create Successful Business Models with Our IT Solutions" />
+                        <Image
+                            src={ctaImage}
+                            className="rounded-lg md:max-w-lg"
+                            alt="Empowering Businesses with Strategic Insights"
+                        />
                     </div>
                     <div className="max-w-xl mt-6 md:mt-0 lg:max-w-2xl">
                         <h2 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
-                            Create Successful Business Models with Our IT Solutions
+                            Empower Your Business with AOR Global Media
                         </h2>
                         <p className="mt-3 text-gray-600">
-                            Blinder, a software development company, helps to digitize businesses by focusing on client’s business challenges, needs. We value close transparent cooperation and encourage our clients to participate actively in the project development life cycle.
+                            In partnership with AOR Global Media, businesses unlock growth potential through strategic insights, innovative solutions, and measurable results, ensuring success in today’s competitive landscape.
                         </p>
+                        <ul className="mt-4 list-disc list-inside text-gray-600">
+                            <li>Marketing & Brand Strategy</li>
+                            <li>Targeted Advertising Campaigns</li>
+                            <li>Sales Strategy & Execution</li>
+                            <li>Data-Driven Market Research</li>
+                            <li>Staff Training in Sales & Marketing</li>
+                        </ul>
                         <NavLink
                             href="/get-started"
-                            className="inline-block mt-4 font-medium text-sm text-white bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800"
+                            className="inline-block mt-6 font-medium text-sm text-blue-800 bg-white border border-blue-800 hover:bg-blue-800 hover:text-white px-5 py-3 rounded-lg transition duration-150"
                         >
-                            Get started
+                            Get Started
                         </NavLink>
                     </div>
                 </div>
             </div>
         </SectionWrapper>
-    )
-}
+    );
+};
 
-export default CTA
+export default CTA;

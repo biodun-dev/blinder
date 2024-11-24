@@ -9,7 +9,7 @@ const Features = () => {
                 </svg>
             ),
             title: "Marketing & Brand Strategy",
-            desc: "Crafting tailored marketing and branding strategies that resonate with your audience and boost engagement."
+            desc: "Crafting tailored marketing and branding strategies that resonate with your audience and boost engagement.",
         },
         {
             icon: (
@@ -18,7 +18,7 @@ const Features = () => {
                 </svg>
             ),
             title: "Targeted Advertising Campaigns",
-            desc: "Executing focused ad campaigns designed to maximize ROI and expand your reach effectively."
+            desc: "Executing focused ad campaigns designed to maximize ROI and expand your reach effectively.",
         },
         {
             icon: (
@@ -27,7 +27,7 @@ const Features = () => {
                 </svg>
             ),
             title: "Sales Strategy & Execution",
-            desc: "Developing and implementing sales strategies that drive measurable results and improve customer acquisition."
+            desc: "Developing and implementing sales strategies that drive measurable results and improve customer acquisition.",
         },
         {
             icon: (
@@ -36,7 +36,7 @@ const Features = () => {
                 </svg>
             ),
             title: "Data-Driven Market Research",
-            desc: "Providing actionable insights through comprehensive market analysis and performance tracking."
+            desc: "Providing actionable insights through comprehensive market analysis and performance tracking.",
         },
         {
             icon: (
@@ -45,7 +45,16 @@ const Features = () => {
                 </svg>
             ),
             title: "Staff Training in Sales & Marketing",
-            desc: "Equipping your team with essential skills and knowledge to excel in sales and marketing."
+            desc: "Equipping your team with essential skills and knowledge to excel in sales and marketing.",
+        },
+        {
+            icon: (
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                </svg>
+            ),
+            title: "Logistics",
+            desc: "lorem",
         },
     ];
 
@@ -53,7 +62,7 @@ const Features = () => {
         <SectionWrapper>
             <div id="features" className="custom-screen text-gray-600">
                 <h2 className="text-3xl font-extrabold text-center text-gray-800 mb-4">Our Expertise</h2>
-                <p className="text-center text-gray-600">
+                <p className="text-center text-gray-800">
                     Driving growth through innovative solutions and tailored strategies.
                 </p>
                 <ul className="grid gap-x-12 gap-y-8 sm:grid-cols-2 lg:grid-cols-3 mt-8">
@@ -62,15 +71,17 @@ const Features = () => {
                             key={idx}
                             className="space-y-3 transform transition duration-300 ease-out hover:scale-105"
                             style={{
-                                animation: `rise 0.4s ease-in-out ${idx * 0.2}s forwards`,
+                                animation: `rise 0.4s ease-in-out ${(idx * 0.3) + 0.2}s forwards`,
                                 opacity: 0,
                             }}
                         >
-                            <div className="w-12 h-12 border text-indigo-600 rounded-full flex items-center justify-center">
+                            <div className="w-12 h-12 border text-gray-800 rounded-full flex items-center justify-center">
                                 {item.icon}
                             </div>
-                            <h4 className="text-lg text-gray-800 font-semibold">{item.title}</h4>
-                            <p>{item.desc}</p>
+                            <h4 className="text-lg text-gray-800 font-semibold hover:text-[#FF0000]">
+                                {item.title}
+                            </h4>
+                            <p className="text-gray-800">{item.desc}</p>
                         </li>
                     ))}
                 </ul>

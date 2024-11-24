@@ -17,7 +17,7 @@ const Navbar = () => {
     ];
 
     useEffect(() => {
-        // Close the navbar menu when navigating
+
         const handleState = () => {
             document.body.classList.remove("overflow-hidden");
             setState(false);

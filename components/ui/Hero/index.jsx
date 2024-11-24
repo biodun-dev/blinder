@@ -2,7 +2,8 @@ import NavLink from "../NavLink";
 
 const Hero = () => (
   <section>
-    <div className="py-28 bg-blue-800 text-white">
+    {/* Add top padding to account for the fixed navbar height */}
+    <div className="pt-32 pb-28 bg-blue-800 text-white">
       <div className="space-y-5 max-w-4xl mx-auto text-center">
         {/* Title */}
         <h1 className="text-4xl font-extrabold mx-auto sm:text-6xl">
@@ -10,7 +11,7 @@ const Hero = () => (
         </h1>
         {/* Subtitle */}
         <p className="max-w-xl mx-auto">
-          Delivering data-driven strategies, innovative solutions, and measurable results to help businesses thrive in a competitive landscape.
+        At AOR Global Media, we empower businesses with data-driven strategies, tailored solutions, and measurable results to thrive and succeed in today's competitive landscape.
         </p>
         {/* Buttons */}
         <div className="flex items-center justify-center gap-x-3 font-medium text-sm">
