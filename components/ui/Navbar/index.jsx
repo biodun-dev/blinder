@@ -69,7 +69,7 @@ const Navbar = () => {
                     <div className={`flex-1 pb-3 mt-8 md:pb-0 md:mt-0 md:block ${state ? "" : "hidden"}`}>
                         <ul className="text-blue-800 justify-end items-center space-y-6 md:flex md:space-x-6 md:space-y-0 md:font-medium">
                             {navigation.map((item, idx) => (
-                                <li key={idx} className="duration-150 hover:text-blue-900">
+                                <li key={idx} className="duration-150 hover:text-red-600">
                                     <Link href={item.path} className="block">
                                         {item.title}
                                     </Link>
@@ -78,7 +78,7 @@ const Navbar = () => {
                             <li>
                                 <NavLink
                                     href="/contact-us"
-                                    className="block font-medium text-sm text-red-600 border border-red-600 bg-white hover:bg-red-50 px-5 py-2 rounded-lg md:inline"
+                                    className="block font-medium text-sm text-red-600 border border-red-600 bg-white hover:bg-red-600 hover:text-white px-5 py-2 rounded-lg md:inline"
                                 >
                                     Contact Us
                                 </NavLink>
