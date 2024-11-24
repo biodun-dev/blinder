@@ -4,7 +4,7 @@ const Brand = () => (
     <Link href="/">
         <img
             src="/aor.png"
-            width={160}
+            width={135}
             height={120}
             alt="AOR logo"
         />
