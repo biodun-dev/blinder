@@ -17,10 +17,10 @@ const CTA = () => {
                     </div>
                     <div className="max-w-xl mt-6 md:mt-0 lg:max-w-2xl">
                         <h2 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
-                            Empower Your Business with AOR Global Media
+                            Empower Your Business with AOR Global 
                         </h2>
                         <p className="mt-3 text-gray-600">
-                            In partnership with AOR Global Media, businesses unlock growth potential through strategic insights, innovative solutions, and measurable results, ensuring success in today’s competitive landscape.
+                            In partnership with AOR Global , businesses unlock growth potential through strategic insights, innovative solutions, and measurable results, ensuring success in today’s competitive landscape.
                         </p>
                         <ul className="mt-4 list-disc list-inside text-gray-600">
                             <li>Marketing & Brand Strategy</li>

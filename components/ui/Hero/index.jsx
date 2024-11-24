@@ -11,7 +11,7 @@ const Hero = () => (
         </h1>
         {/* Subtitle */}
         <p className="max-w-xl mx-auto">
-        At AOR Global Media, we empower businesses with data-driven strategies, tailored solutions, and measurable results to thrive and succeed in today's competitive landscape.
+        At AOR Global , we empower businesses with data-driven strategies, tailored solutions, and measurable results to thrive and succeed in today's competitive landscape.
         </p>
         {/* Buttons */}
         <div className="flex items-center justify-center gap-x-3 font-medium text-sm">
