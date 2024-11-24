@@ -6,6 +6,7 @@ import NavLink from '../NavLink';
 
 const Navbar = () => {
     const [state, setState] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
     const { events } = useRouter();
 
     const navigation = [
@@ -23,6 +24,16 @@ const Navbar = () => {
         };
         events.on("routeChangeStart", handleState);
         events.on("hashChangeStart", handleState);
+
+        // Detect scroll position
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 0);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
     }, []);
 
     const handleNavMenu = () => {
@@ -32,7 +43,11 @@ const Navbar = () => {
 
     return (
         <header>
-            <nav className={`bg-white w-full md:static md:text-sm ${state ? "fixed z-10 h-full" : ""}`}>
+            <nav
+                className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+                    isScrolled ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-md" : "bg-white"
+                }`}
+            >
                 <div className="custom-screen items-center mx-auto md:flex">
                     <div className="flex items-center justify-between py-3 md:py-5 md:block">
                         <Brand />

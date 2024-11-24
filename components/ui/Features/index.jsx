@@ -52,25 +52,41 @@ const Features = () => {
     return (
         <SectionWrapper>
             <div id="features" className="custom-screen text-gray-600">
-                <h2 className="text-3xl font-extrabold text-center text-blue-800 mb-4">Our Expertise</h2>
-                <p className="text-center text-gray-700">
+                <h2 className="text-3xl font-extrabold text-center text-gray-800 mb-4">Our Expertise</h2>
+                <p className="text-center text-gray-600">
                     Driving growth through innovative solutions and tailored strategies.
                 </p>
                 <ul className="grid gap-x-12 gap-y-8 sm:grid-cols-2 lg:grid-cols-3 mt-8">
                     {features.map((item, idx) => (
                         <li
                             key={idx}
-                            className="space-y-3"
+                            className="space-y-3 transform transition duration-300 ease-out hover:scale-105"
+                            style={{
+                                animation: `rise 0.4s ease-in-out ${idx * 0.2}s forwards`,
+                                opacity: 0,
+                            }}
                         >
-                            <div className="w-12 h-12 border text-blue-800 rounded-full flex items-center justify-center">
+                            <div className="w-12 h-12 border text-indigo-600 rounded-full flex items-center justify-center">
                                 {item.icon}
                             </div>
-                            <h4 className="text-lg text-blue-800 font-semibold">{item.title}</h4>
-                            <p className="text-gray-700">{item.desc}</p>
+                            <h4 className="text-lg text-gray-800 font-semibold">{item.title}</h4>
+                            <p>{item.desc}</p>
                         </li>
                     ))}
                 </ul>
             </div>
+            <style jsx>{`
+                @keyframes rise {
+                    from {
+                        transform: translateY(20px);
+                        opacity: 0;
+                    }
+                    to {
+                        transform: translateY(0);
+                        opacity: 1;
+                    }
+                }
+            `}</style>
         </SectionWrapper>
     );
 };
