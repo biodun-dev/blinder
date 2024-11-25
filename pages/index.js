@@ -22,9 +22,8 @@ export default function Home() {
       <GradientWrapper>
         <Features />
         <CTA />
-        < ClientSolutions/>
       </GradientWrapper>
-  
+      < ClientSolutions/>
       <InsightsAndTrends />
       <GradientWrapper>
         <Testimonials />
