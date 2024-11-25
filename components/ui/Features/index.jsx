@@ -5,7 +5,16 @@ const Features = () => {
         {
             icon: (
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 3h18M3 6l3 14a2 2 0 002 2h8a2 2 0 002-2l3-14M5.5 10h13" />
+                </svg>
+            ),
+            title: "Logistics",
+            desc: "Streamlining supply chain processes with reliable and efficient logistics solutions tailored to your business needs.",
+        },
+        {
+            icon: (
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v18m9-9H3" />
                 </svg>
             ),
             title: "Marketing & Brand Strategy",
@@ -13,8 +22,8 @@ const Features = () => {
         },
         {
             icon: (
-                <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 17.25L14.25 12 9.75 6.75" />
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-3-3v6m7.5-9h-15a2.25 2.25 0 00-2.25 2.25v9a2.25 2.25 0 002.25 2.25h15a2.25 2.25 0 002.25-2.25v-9A2.25 2.25 0 0018 6.75z" />
                 </svg>
             ),
             title: "Targeted Advertising Campaigns",
@@ -23,7 +32,7 @@ const Features = () => {
         {
             icon: (
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 15.75L12 12m0 0l3.75 3.75M12 12V3" />
                 </svg>
             ),
             title: "Sales Strategy & Execution",
@@ -32,7 +41,7 @@ const Features = () => {
         {
             icon: (
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 10.5v3m6-4.5h9m-9 6h6" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 9.75h4.5v4.5h-4.5zM2.25 9.75a7.5 7.5 0 0115 0v4.5a7.5 7.5 0 01-15 0v-4.5z" />
                 </svg>
             ),
             title: "Data-Driven Market Research",
@@ -41,20 +50,11 @@ const Features = () => {
         {
             icon: (
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5V6.75a3.75 3.75 0 10-7.5 0v3.75m-2.25 6.75h12.75a1.125 1.125 0 001.125-1.125v-4.5A1.125 1.125 0 0018.75 10.5H5.25a1.125 1.125 0 00-1.125 1.125v4.5c0 .621.504 1.125 1.125 1.125z" />
                 </svg>
             ),
             title: "Staff Training in Sales & Marketing",
             desc: "Equipping your team with essential skills and knowledge to excel in sales and marketing.",
-        },
-        {
-            icon: (
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
-                </svg>
-            ),
-            title: "Logistics",
-            desc: "lorem",
         },
     ];
 
