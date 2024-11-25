@@ -1,8 +1,8 @@
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
-import Brand from '../Brand';
-import NavLink from '../NavLink';
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+import Brand from "../Brand";
+import NavLink from "../NavLink";
 
 const Navbar = () => {
     const [state, setState] = useState(false);
@@ -17,7 +17,6 @@ const Navbar = () => {
     ];
 
     useEffect(() => {
-
         const handleState = () => {
             document.body.classList.remove("overflow-hidden");
             setState(false);
@@ -92,8 +91,8 @@ const Navbar = () => {
                             ))}
                             <li>
                                 <NavLink
-                                    href="/contact-us"
-                                    className="block font-medium text-sm text-red-600 border border-red-600 bg-white hover:bg-red-600 hover:text-white px-5 py-2 rounded-lg md:inline"
+                                    href="/get-started"
+                                    className="block font-medium text-sm text-white bg-red-600 hover:bg-red-500 px-5 py-2 rounded-lg md:inline transition duration-200"
                                 >
                                     Contact Us
                                 </NavLink>

@@ -59,7 +59,15 @@ const Footer = () => (
     <footer>
         <div className="custom-screen pt-16">
             <div className="mt-10 py-10 border-t items-center justify-between sm:flex">
-                <p className="text-gray-600">© 2024 AOR Global. All rights reserved.</p>
+                {/* Address Section */}
+                <div className="mb-6 text-center sm:text-left">
+                    <h4 className="text-lg font-semibold text-gray-800">Contact Information</h4>
+                    <p>123 AOR Global Lane</p>
+                    <p>Lagos, Nigeria</p>
+                    <p>Phone: +234 123 456 7890</p>
+                    <p>Email: support@aorglobal.com</p>
+                </div>
+                {/* Social Icons */}
                 <div className="flex items-center gap-x-6 text-gray-400 mt-6">
                     {socialInfo.map((item, idx) => (
                         <a
@@ -73,6 +81,8 @@ const Footer = () => (
                         </a>
                     ))}
                 </div>
+                {/* Footer Text */}
+                <p className="text-gray-600 mt-6 sm:mt-0">© 2024 AOR Global. All rights reserved.</p>
             </div>
         </div>
     </footer>
