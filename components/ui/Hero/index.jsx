@@ -13,7 +13,7 @@ const Hero = () => {
 
   return (
     <section>
-      <div className="pt-32 pb-28 bg-blue-800 text-white">
+      <div className="pt-32 pb-10 bg-blue-800 text-white">
         <div className="space-y-5 max-w-4xl mx-auto text-center">
           <h1
             className={`text-4xl font-extrabold mx-auto sm:text-6xl transition duration-1000 ${
