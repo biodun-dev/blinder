@@ -72,10 +72,9 @@ import {
             </p>
           </div>
           <div className="mt-16 relative">
-            {/* Blur overlays */}
-            <div className="absolute top-0 left-0 w-full h-10 bg-gradient-to-b from-gray-50 to-transparent z-10 pointer-events-none"></div>
-            <div className="absolute bottom-0 left-0 w-full h-10 bg-gradient-to-t from-gray-50 to-transparent z-10 pointer-events-none"></div>
-            {/* Horizontal Scrolling Wrapper */}
+            <div className="absolute top-0 left-0 h-full w-24 bg-gradient-to-r from-gray-50 via-gray-50/90 to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute top-0 right-0 h-full w-24 bg-gradient-to-l from-gray-50 via-gray-50/90 to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute top-0 h-24 w-full bg-gradient-to-b from-gray-50 via-gray-50/90 to-transparent z-10 pointer-events-none"></div>
             <div className="overflow-hidden w-full hide-scrollbar relative">
               <div className="flex gap-x-8 animate-marquee whitespace-nowrap flex-nowrap w-max">
                 {insights.map((item, idx) => (
@@ -84,9 +83,7 @@ import {
                     className="group flex-shrink-0 w-96 h-[400px] bg-white shadow-lg hover:shadow-xl rounded-lg transition transform hover:scale-105 border border-gray-100 p-8 flex flex-col"
                   >
                     <div className="flex items-center space-x-4">
-                      <div className="p-4 bg-gray-100 rounded-full">
-                        {item.icon}
-                      </div>
+                      <div className="p-4 bg-gray-100 rounded-full">{item.icon}</div>
                       <h4 className="text-lg font-bold text-gray-800 group-hover:text-red-600 break-words whitespace-normal">
                         {item.title}
                       </h4>
@@ -106,16 +103,13 @@ import {
                     </div>
                   </div>
                 ))}
-                {/* Duplicate the list for seamless scrolling */}
                 {insights.map((item, idx) => (
                   <div
                     key={`copy-${idx}`}
                     className="group flex-shrink-0 w-96 h-[400px] bg-white shadow-lg hover:shadow-xl rounded-lg transition transform hover:scale-105 border border-gray-100 p-8 flex flex-col"
                   >
                     <div className="flex items-center space-x-4">
-                      <div className="p-4 bg-gray-100 rounded-full">
-                        {item.icon}
-                      </div>
+                      <div className="p-4 bg-gray-100 rounded-full">{item.icon}</div>
                       <h4 className="text-lg font-bold text-gray-800 group-hover:text-red-600 break-words whitespace-normal">
                         {item.title}
                       </h4>
