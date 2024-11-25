@@ -58,17 +58,17 @@ const socialInfo = [
 const Footer = () => (
     <footer>
         <div className="custom-screen pt-16">
-            <div className="mt-10 py-10 border-t items-center justify-between sm:flex">
+            <div className="mt-10 py-10 border-t flex flex-col gap-y-8 sm:flex-row sm:items-start sm:justify-between">
                 {/* Address Section */}
-                <div className="mb-6 text-center sm:text-left">
-                    <h4 className="text-lg font-semibold text-gray-800">Contact Information</h4>
-                    <p>123 AOR Global Lane</p>
-                    <p>Lagos, Nigeria</p>
-                    <p>Phone: +234 123 456 7890</p>
-                    <p>Email: support@aorglobal.com</p>
+                <div className="text-center sm:text-left">
+                    <h4 className="text-lg font-semibold text-gray-800 mb-2">Contact Information</h4>
+                    <p className="text-gray-600">123 AOR Global Lane</p>
+                    <p className="text-gray-600">Lagos, Nigeria</p>
+                    <p className="text-gray-600">Phone: +234 123 456 7890</p>
+                    <p className="text-gray-600">Email: support@aorglobal.com</p>
                 </div>
                 {/* Social Icons */}
-                <div className="flex items-center gap-x-6 text-gray-400 mt-6">
+                <div className="flex justify-center sm:justify-start gap-4">
                     {socialInfo.map((item, idx) => (
                         <a
                             key={idx}
@@ -76,13 +76,16 @@ const Footer = () => (
                             aria-label="social media"
                             target="_blank"
                             rel="noreferrer"
+                            className="text-gray-400 hover:text-gray-500"
                         >
                             {item.icon}
                         </a>
                     ))}
                 </div>
                 {/* Footer Text */}
-                <p className="text-gray-600 mt-6 sm:mt-0">© 2024 AOR Global. All rights reserved.</p>
+                <div className="text-center sm:text-right">
+                    <p className="text-gray-600">© 2024 AOR Global. All rights reserved.</p>
+                </div>
             </div>
         </div>
     </footer>
