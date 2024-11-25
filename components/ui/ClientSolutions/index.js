@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 import {
     FaShoppingCart,
     FaTruck,
@@ -10,6 +10,30 @@ import {
 import SectionWrapper from "../../SectionWrapper";
 
 const ClientSolutions = () => {
+    const [isVisible, setIsVisible] = useState(false);
+    const sectionRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                }
+            },
+            { threshold: 0.3 }
+        );
+
+        if (sectionRef.current) {
+            observer.observe(sectionRef.current);
+        }
+
+        return () => {
+            if (sectionRef.current) {
+                observer.unobserve(sectionRef.current);
+            }
+        };
+    }, []);
+
     const solutions = [
         {
             icon: <FaShoppingCart className="text-4xl text-blue-600" />,
@@ -57,6 +81,7 @@ const ClientSolutions = () => {
 
     return (
         <div
+            ref={sectionRef}
             style={{
                 backgroundColor: "#f8f9fa",
                 minHeight: "100vh",
@@ -68,10 +93,18 @@ const ClientSolutions = () => {
             <SectionWrapper>
                 <div id="client-solutions" className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
                     <div className="max-w-2xl mx-auto text-center">
-                        <h2 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
+                        <h2
+                            className={`text-gray-800 text-3xl font-semibold sm:text-4xl transition-all duration-1000 ${
+                                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                            }`}
+                        >
                             Tailored Solutions for Every Industry
                         </h2>
-                        <p className="mt-4 text-lg">
+                        <p
+                            className={`mt-4 text-lg transition-all duration-1000 delay-200 ${
+                                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                            }`}
+                        >
                             Discover how our expertise drives impactful results across diverse sectors.
                         </p>
                     </div>
@@ -80,11 +113,14 @@ const ClientSolutions = () => {
                             {solutions.map((item, idx) => (
                                 <li
                                     key={idx}
-                                    className={`group relative bg-white shadow-md transition-all duration-300 ease-in-out transform hover:-translate-y-2 overflow-hidden ${item.hoverColor}`}
+                                    className={`group relative bg-white shadow-md transition-all duration-1000 ease-in-out transform ${
+                                        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                                    } hover:-translate-y-2 overflow-hidden ${item.hoverColor}`}
                                     style={{
                                         borderRadius: "1rem 1rem 0 0",
                                         height: "320px",
                                         clipPath: "inset(0px 0px -20px 0px)",
+                                        transitionDelay: `${idx * 0.2}s`,
                                     }}
                                 >
                                     <a href={item.link} className="block h-full p-6">
