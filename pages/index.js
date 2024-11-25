@@ -6,7 +6,7 @@ import FooterCTA from "../components/ui/FooterCTA";
 import Hero from "../components/ui/Hero";
 import LogoGrid from "../components/ui/LogoGrid";
 import Testimonials from "../components/ui/Testimonials";
-import ToolKit from "../components/ui/ToolKit";
+import InsightsAndTrends from "../components/ui/Insights";
 import YouTubeEmbed from "../components/ui/YouTubeEmbed";
 
 export default function Home() {
@@ -22,7 +22,7 @@ export default function Home() {
         <Features />
         <CTA />
       </GradientWrapper>
-      <ToolKit />
+      <InsightsAndTrends />
       <GradientWrapper>
         <Testimonials />
       </GradientWrapper>

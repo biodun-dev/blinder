@@ -1,84 +1,80 @@
 import SectionWrapper from "../../SectionWrapper"
-
 const Testimonials = () => {
-
     const testimonials = [
         {
-            avatar: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-            name: "Alex wonderson",
-            title: "Founder of Lyconf",
-            quote: "As a small business owner, I was doing everything and my workload was increasing. With this startup, I was able to save time so I could focus on the things that matter most: my clients and my family."
+            avatar: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+            name: "Chidi Nwosu",
+            title: "Logistics Manager at TransitPro",
+            quote: "AOR Global revolutionized my business operations with tailored strategies and expert logistics solutions. We’ve streamlined processes and seized new growth opportunities like never before."
         },
         {
-            avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-            name: "Karim ahmed",
-            title: "DevOps engineer",
-            quote: "My company's software now is easy to use, saves time and money, and is loved by a lot of users. One customer saved $10k over the course of 3 years and another saves 8 hours per week! Thanks to Blinder."
+            avatar: "https://images.unsplash.com/photo-1558435607-cbdbea18350b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+            name: "Kemi Adeyemi",
+            title: "Marketing Strategist",
+            quote: "Thanks to AOR Global, we optimized our logistics and marketing strategies, achieving measurable results. Our operations are now seamless, and our sales have seen a substantial increase."
         },
         {
-            avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80",
-            name: "Lysa stian",
-            title: "System manger",
-            quote: "My business was in a dire situation. I had no idea what to do, and I felt like I was losing hope. Then I found this Startup and everything changed. It helped me create automated sales."
+            avatar: "https://images.unsplash.com/photo-1563122870-6bfeb71ddf31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+            name: "Bisi Onyekachi",
+            title: "Operations Consultant",
+            quote: "Working with AOR Global was a game changer. Their data-driven insights and logistics expertise allowed us to streamline operations and achieve sustainable success."
         },
         {
-            avatar: "https://randomuser.me/api/portraits/women/79.jpg",
-            name: "Angela stian",
-            title: "Product designer",
-            quote: "One day, my company was about to go under and I had no idea what to do. I found Blinder and it helped me get my business back on track.Now, my company is flourishing and I see new opportunities."
+            avatar: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+            name: "Aisha Suleiman",
+            title: "Supply Chain Specialist",
+            quote: "AOR Global helped us build a solid logistics framework and marketing strategies that not only saved us time but also uncovered new opportunities for growth."
         },
         {
-            avatar: "https://images.unsplash.com/photo-1464863979621-258859e62245?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=386&q=80",
-            name: "Jurica koletic",
-            title: "Founder of Let’s code",
-            quote: "In these difficult economic times, doing business is tough. Funding is hard to come by and many entrepreneurs are struggling to keep their doors open. but when I found this startup everything changed."
+            avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+            name: "Tunde Owolabi",
+            title: "Business Development Lead at InnovateNaija",
+            quote: "In a challenging business environment, AOR Global provided the expertise we needed to optimize our logistics and marketing. The results have been phenomenal, even in tough times."
         },
         {
-            avatar: "https://images.unsplash.com/photo-1590038767624-dac5740a997b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-            name: "Kavi laron",
-            title: "Full stack engineer",
-            quote: "We all know how costly it is to find good help. I was faced with this problem when I lost my data entry staff and my business was on the brink of going under. Thankfully, Blinder saved the day."
-        },
-    ]
+            avatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+            name: "Ngozi Okafor",
+            title: "E-Commerce Operations Manager",
+            quote: "We were struggling with inefficient logistics and marketing. AOR Global’s tailored solutions transformed our business, helping us scale and achieve long-term success."
+        }
+    ];
 
     return (
         <SectionWrapper className="pb-0">
             <div id="testimonials" className="max-w-screen-xl mx-auto px-4 md:px-8">
                 <div className="max-w-2xl sm:text-center md:mx-auto">
                     <h2 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
-                        See what others saying about us
+                        See What Others Are Saying About Us
                     </h2>
                     <p className="mt-3 text-gray-600">
-                        Listen to what the experts around the world are saying about us.
+                        Discover how we’ve helped businesses streamline operations, embrace growth, and achieve measurable success.
                     </p>
                 </div>
                 <div className="mt-12">
                     <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                        {
-                            testimonials.map((item, idx) => (
-                                <li key={idx} className="bg-white border p-4 rounded-xl">
-                                    <figure>
-                                        <div className="flex items-center gap-x-4">
-                                            <img src={item.avatar} className="w-14 h-14 object-cover rounded-full" alt={item.name} />
-                                            <div>
-                                                <span className="block text-gray-800 font-semibold">{item.name}</span>
-                                                <span className="block text-gray-600 text-sm mt-0.5">{item.title}</span>
-                                            </div>
+                        {testimonials.map((item, idx) => (
+                            <li key={idx} className="bg-white border p-4 rounded-xl">
+                                <figure>
+                                    <div className="flex items-center gap-x-4">
+                                        <img src={item.avatar} className="w-14 h-14 object-cover rounded-full" alt={item.name} />
+                                        <div>
+                                            <span className="block text-gray-800 font-semibold">{item.name}</span>
+                                            <span className="block text-gray-600 text-sm mt-0.5">{item.title}</span>
                                         </div>
-                                        <blockquote>
-                                            <p className="mt-6 text-gray-700">
-                                                {item.quote}
-                                            </p>
-                                        </blockquote>
-                                    </figure>
-                                </li>
-                            ))
-                        }
+                                    </div>
+                                    <blockquote>
+                                        <p className="mt-6 text-gray-700">
+                                            {item.quote}
+                                        </p>
+                                    </blockquote>
+                                </figure>
+                            </li>
+                        ))}
                     </ul>
                 </div>
             </div>
         </SectionWrapper>
-    )
-}
+    );
+};
 
-export default Testimonials
+export default Testimonials;
