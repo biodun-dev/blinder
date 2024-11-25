@@ -8,6 +8,7 @@ import LogoGrid from "../components/ui/LogoGrid";
 import Testimonials from "../components/ui/Testimonials";
 import InsightsAndTrends from "../components/ui/Insights";
 import YouTubeEmbed from "../components/ui/YouTubeEmbed";
+import ClientSolutions from "../components/ui/ClientSolutions"
 
 export default function Home() {
   return (
@@ -21,7 +22,9 @@ export default function Home() {
       <GradientWrapper>
         <Features />
         <CTA />
+        < ClientSolutions/>
       </GradientWrapper>
+  
       <InsightsAndTrends />
       <GradientWrapper>
         <Testimonials />
