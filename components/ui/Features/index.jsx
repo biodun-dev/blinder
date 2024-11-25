@@ -12,7 +12,7 @@ const Features = () => {
                     setIsVisible(true);
                 }
             },
-            { threshold: 0.1 } // Lower threshold so the animation triggers earlier
+            { threshold: 0.1 } // Trigger when 10% of the section is visible
         );
 
         if (sectionRef.current) {
@@ -98,8 +98,10 @@ const Features = () => {
                     {features.map((item, idx) => (
                         <li
                             key={idx}
-                            className={`space-y-3 transform transition duration-300 ease ${
-                                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                            className={`space-y-3 transform transition duration-700 ease-in-out ${
+                                isVisible
+                                    ? "opacity-100 translate-y-0 blur-none"
+                                    : "opacity-0 translate-y-10 blur-md"
                             }`}
                             style={{
                                 transitionDelay: `${idx * 0.3}s`,
