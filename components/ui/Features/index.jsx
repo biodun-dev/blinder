@@ -12,7 +12,7 @@ const Features = () => {
                     setIsVisible(true);
                 }
             },
-            { threshold: 0.3 } // Lower threshold so the animation triggers earlier
+            { threshold: 0.1 } // Lower threshold so the animation triggers earlier
         );
 
         if (sectionRef.current) {
