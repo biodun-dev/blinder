@@ -1,6 +1,31 @@
+import { useEffect, useState, useRef } from "react";
 import SectionWrapper from "../../SectionWrapper";
 
 const Features = () => {
+    const [isVisible, setIsVisible] = useState(false);
+    const sectionRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                }
+            },
+            { threshold: 1.0 }
+        );
+
+        if (sectionRef.current) {
+            observer.observe(sectionRef.current);
+        }
+
+        return () => {
+            if (sectionRef.current) {
+                observer.unobserve(sectionRef.current);
+            }
+        };
+    }, []);
+
     const features = [
         {
             icon: (
@@ -60,7 +85,11 @@ const Features = () => {
 
     return (
         <SectionWrapper>
-            <div id="features" className="custom-screen text-gray-600">
+            <div
+                ref={sectionRef}
+                id="features"
+                className="custom-screen text-gray-600"
+            >
                 <h2 className="text-3xl font-extrabold text-center text-gray-800 mb-4">Our Expertise</h2>
                 <p className="text-center text-gray-800">
                     Driving growth through innovative solutions and tailored strategies.
@@ -69,10 +98,11 @@ const Features = () => {
                     {features.map((item, idx) => (
                         <li
                             key={idx}
-                            className="space-y-3 transform transition duration-300 ease-out hover:scale-105"
+                            className={`space-y-3 transform transition duration-300 ease ${
+                                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                            }`}
                             style={{
-                                animation: `rise 0.4s ease-in-out ${(idx * 0.3) + 0.2}s forwards`,
-                                opacity: 0,
+                                transitionDelay: `${idx * 0.3}s`,
                             }}
                         >
                             <div className="w-12 h-12 border text-gray-800 rounded-full flex items-center justify-center">
@@ -86,18 +116,6 @@ const Features = () => {
                     ))}
                 </ul>
             </div>
-            <style jsx>{`
-                @keyframes rise {
-                    from {
-                        transform: translateY(20px);
-                        opacity: 0;
-                    }
-                    to {
-                        transform: translateY(0);
-                        opacity: 1;
-                    }
-                }
-            `}</style>
         </SectionWrapper>
     );
 };
