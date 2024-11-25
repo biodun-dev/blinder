@@ -1,21 +1,24 @@
-import Head from "next/head"
-import Footer from "./ui/Footer"
-import Navbar from "./ui/Navbar"
+import Head from "next/head";
+import Footer from "./ui/Footer";
+import Navbar from "./ui/Navbar";
 
 const Layout = ({ children }) => {
     return (
         <>
             <Head>
-                <title>AOR</title>
-                <meta name='description' content='Blinder making it simple for you to build and grow your SaaS applications, or any business idea' />
-                <meta name='viewport' content='width=device-width, initial-scale=1' />
-                <link rel='icon' href='/favicon.ico' />
+                <title>AOR Global - Empowering Strategic Growth</title>
+                <meta
+                    name="description"
+                    content="AOR Global empowers businesses with data-driven strategies, innovative solutions, and measurable results to thrive in a competitive landscape."
+                />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <link rel="icon" href="/favicon.ico" />
             </Head>
             <Navbar />
             <main>{children}</main>
             <Footer />
         </>
-    )
-}
+    );
+};
 
-export default Layout
+export default Layout;
