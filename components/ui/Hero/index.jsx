@@ -12,47 +12,63 @@ const Hero = () => {
   }, []);
 
   return (
-    <section>
-      <div className="pt-32 pb-10 bg-blue-800 text-white">
-        <div className="space-y-5 max-w-4xl mx-auto text-center">
+    <section className="relative overflow-hidden">
+      {/* Dynamic Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-700 via-blue-800 to-blue-900">
+        {/* Subtle Texture Overlay */}
+        <div
+          className="absolute inset-0 bg-pattern opacity-20"
+          style={{
+            backgroundImage: "url('/images/texture.svg')",
+            backgroundSize: "400px 400px",
+          }}
+        ></div>
+        {/* Floating Particles */}
+        <div className="absolute inset-0 animate-float bg-particles opacity-30"></div>
+      </div>
+
+      {/* Content */}
+      <div className="relative pt-32 pb-10 text-white max-w-6xl mx-auto text-center">
+        <div className="space-y-6">
+          {/* Headline */}
           <h1
-            className={`text-4xl font-extrabold mx-auto sm:text-6xl transition duration-1000 ${
+            className={`text-5xl font-extrabold sm:text-7xl leading-tight tracking-wide transition duration-1000 ${
               isVisible
                 ? "opacity-100 filter-none translate-y-0"
-                : "opacity-0 blur-sm translate-y-10"
+                : "opacity-0 blur-md translate-y-10"
             }`}
           >
-            Empowering Growth through Strategic Insights and Seamless Logistics
+            Empowering Growth Through Innovation
           </h1>
+          {/* Subheadline */}
           <p
-            className={`max-w-xl mx-auto transition duration-1000 delay-200 ${
+            className={`max-w-3xl mx-auto text-lg sm:text-xl font-medium transition duration-1000 delay-200 ${
               isVisible
                 ? "opacity-100 filter-none translate-y-0"
-                : "opacity-0 blur-sm translate-y-10"
+                : "opacity-0 blur-md translate-y-10"
             }`}
           >
-            At AOR Global, we empower businesses with data-driven strategies,
-            tailored logistics, and measurable results to excel in today's
-            competitive landscape.
+            Discover data-driven strategies, seamless logistics, and tailored solutions designed for your business success.
           </p>
+          {/* Buttons */}
           <div
-            className={`flex items-center justify-center gap-x-3 font-medium text-sm transition duration-1000 delay-300 ${
+            className={`flex items-center justify-center gap-x-5 font-medium text-sm transition duration-1000 delay-300 ${
               isVisible
                 ? "opacity-100 filter-none translate-y-0"
-                : "opacity-0 blur-sm translate-y-10"
+                : "opacity-0 blur-md translate-y-10"
             }`}
           >
             {/* Primary Button */}
             <NavLink
               href="/services"
-              className="bg-blue-600 text-white hover:bg-blue-700 hover:shadow-lg px-5 py-3 rounded-lg transition-all duration-200"
+              className="bg-blue-600 text-white hover:bg-blue-500 hover:shadow-xl px-6 py-4 rounded-full transition-all duration-300 transform hover:-translate-y-1"
             >
               Explore Services
             </NavLink>
-            {/* Secondary Button with Improved Hover */}
+            {/* Secondary Button */}
             <NavLink
               href="/case-studies"
-              className="bg-gradient-to-br from-red-100 to-red-200 text-red-600 hover:bg-gradient-to-br hover:from-pink-500 hover:to-red-500 hover:text-white px-5 py-3 rounded-lg transition-all duration-200 shadow-lg"
+              className="bg-gradient-to-br from-blue-100 via-blue-200 to-blue-300 text-blue-700 hover:from-blue-200 hover:to-blue-400 hover:text-blue-800 px-6 py-4 rounded-full transition-all duration-300 transform hover:-translate-y-1 shadow-lg"
             >
               View Case Studies
             </NavLink>
