@@ -13,18 +13,18 @@ const Hero = () => {
 
   return (
     <section className="relative overflow-hidden">
-      {/* Dynamic Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-700 via-blue-800 to-blue-900">
-        {/* Subtle Texture Overlay */}
+      {/* Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-red-500 via-blue-600 to-blue-800">
         <div
           className="absolute inset-0 bg-pattern opacity-20"
           style={{
             backgroundImage: "url('/images/texture.svg')",
-            backgroundSize: "400px 400px",
+            backgroundSize: "300px 300px",
           }}
         ></div>
-        {/* Floating Particles */}
-        <div className="absolute inset-0 animate-float bg-particles opacity-30"></div>
+        <div className="absolute inset-0 bg-particles opacity-30">
+          {/* Add particles.js or custom animated particles here */}
+        </div>
       </div>
 
       {/* Content */}
@@ -40,9 +40,10 @@ const Hero = () => {
           >
             Empowering Growth Through Innovation
           </h1>
+
           {/* Subheadline */}
           <p
-            className={`max-w-3xl mx-auto text-lg sm:text-xl font-medium transition duration-1000 delay-200 ${
+            className={`max-w-3xl mx-auto text-lg sm:text-xl font-medium tracking-wide transition duration-1000 delay-200 ${
               isVisible
                 ? "opacity-100 filter-none translate-y-0"
                 : "opacity-0 blur-md translate-y-10"
@@ -50,25 +51,25 @@ const Hero = () => {
           >
             Discover data-driven strategies, seamless logistics, and tailored solutions designed for your business success.
           </p>
+
           {/* Buttons */}
           <div
-            className={`flex items-center justify-center gap-x-5 font-medium text-sm transition duration-1000 delay-300 ${
+            className={`flex flex-wrap items-center justify-center gap-x-5 gap-y-4 font-medium text-sm transition duration-1000 delay-300 ${
               isVisible
                 ? "opacity-100 filter-none translate-y-0"
                 : "opacity-0 blur-md translate-y-10"
             }`}
           >
-            {/* Primary Button */}
-            <NavLink
-              href="/services"
-              className="bg-blue-600 text-white hover:bg-blue-500 hover:shadow-xl px-6 py-4 rounded-full transition-all duration-300 transform hover:-translate-y-1"
-            >
-              Explore Services
-            </NavLink>
-            {/* Secondary Button */}
+        <NavLink
+  href="/services"
+  className="bg-[#DC143C] text-white hover:bg-[#C11235] px-5 sm:px-6 py-3 sm:py-4 rounded-full transition-all duration-300 transform hover:-translate-y-1 shadow-lg"
+>
+  Explore Services
+</NavLink>
+
             <NavLink
               href="/case-studies"
-              className="bg-gradient-to-br from-blue-100 via-blue-200 to-blue-300 text-blue-700 hover:from-blue-200 hover:to-blue-400 hover:text-blue-800 px-6 py-4 rounded-full transition-all duration-300 transform hover:-translate-y-1 shadow-lg"
+              className="bg-gradient-to-br from-blue-100 via-blue-200 to-blue-300 text-blue-700 hover:from-blue-200 hover:to-blue-400 hover:text-blue-800 px-5 sm:px-6 py-3 sm:py-4 rounded-full transition-all duration-300 transform hover:-translate-y-1 shadow-lg"
             >
               View Case Studies
             </NavLink>
