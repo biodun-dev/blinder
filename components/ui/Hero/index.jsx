@@ -44,13 +44,13 @@ const Hero = () => {
           >
             <NavLink
               href="/services"
-              className="text-blue-800 bg-white border border-white hover:bg-blue-600 hover:text-white px-5 py-3 rounded-lg transition duration-150"
+              className="bg-blue-600 text-white hover:bg-blue-700 hover:shadow-lg hover:scale-105 px-5 py-3 rounded-lg transition duration-150"
             >
               Explore Services
             </NavLink>
             <NavLink
               href="/case-studies"
-              className="text-red-600 bg-white border border-red-600 hover:bg-red-600 hover:text-white px-5 py-3 rounded-lg transition duration-150"
+              className="bg-red-600 text-white hover:bg-red-700 hover:shadow-lg hover:scale-105 px-5 py-3 rounded-lg transition duration-150"
             >
               View Case Studies
             </NavLink>
