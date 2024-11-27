@@ -23,5 +23,11 @@
 }
 
 .animate-marquee {
-  animation: marquee 25s linear infinite;
+  animation: marquee 55s linear infinite;
+}
+
+@media (max-width: 768px) {
+  .group-hover\\:opacity-0 {
+    opacity: 1 !important;
+  }
 }
