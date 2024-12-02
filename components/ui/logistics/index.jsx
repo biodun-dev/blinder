@@ -98,11 +98,11 @@ const OurExpertise = () => {
       {services[currentImageIndex].description}
     </p>
     <Link
-      href="/get-started"
-      className="block font-medium text-sm text-white bg-blue-600 hover:bg-black px-5 py-2 rounded-lg md:inline transition duration-300 ease-in-out transform hover:scale-105 shadow-lg no-underline"
-    >
-      Contact Us
-    </Link>
+  href="/get-started"
+  className="inline-block w-auto font-medium text-sm text-white bg-blue-600 hover:bg-black px-5 py-2 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg no-underline"
+>
+  Contact Us
+</Link>
   </div>
 </div>
     </div>
