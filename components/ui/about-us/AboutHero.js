@@ -1,5 +1,5 @@
-'use client'
-import { createContext } from 'react'
+"use client";
+
 import { useEffect, useState } from "react";
 
 const AboutHero = () => {
@@ -14,7 +14,7 @@ const AboutHero = () => {
 
   return (
     <section className="bg-blue-800 text-white py-16">
-      <div className="space-y-8 max-w-5xl mx-auto text-center">
+      <div className="space-y-8 max-w-5xl mx-auto text-center px-4 sm:px-6 lg:px-8">
         <h1
           className={`text-4xl font-extrabold sm:text-5xl transition duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
