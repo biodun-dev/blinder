@@ -1,6 +1,14 @@
-import { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
+import {
+    FaUserTie,
+    FaChartLine,
+    FaBullhorn,
+    FaUsers,
+    FaLightbulb,
+    FaGraduationCap,
+} from "react-icons/fa";
 import SectionWrapper from "../../SectionWrapper";
-import OurExpertise from "../logistics/index"; // Adjust the path to where OurExpertise is located
+import OurExpertise from "../logistics/index";
 
 const Features = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -13,7 +21,7 @@ const Features = () => {
                     setIsVisible(true);
                 }
             },
-            { threshold: 0.1 } // Trigger when 10% of the section is visible
+            { threshold: 0.1 }
         );
 
         if (sectionRef.current) {
@@ -27,91 +35,109 @@ const Features = () => {
         };
     }, []);
 
-    const features = [
+    const solutions = [
         {
-            icon: (
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v18m9-9H3" />
-                </svg>
-            ),
-            title: "Marketing & Brand Strategy",
-            desc: "Crafting tailored marketing and branding strategies that resonate with your audience and boost engagement.",
+            icon: <FaUserTie className="text-4xl text-blue-600" />,
+            title: "Recruitment and Training",
+            desc: "We help businesses source skilled professionals and support employee growth with personalized training programs.",
+            link: "/solutions/recruitment-training",
+            hoverColor: "hover:bg-blue-100",
         },
         {
-            icon: (
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-3-3v6m7.5-9h-15a2.25 2.25 0 00-2.25 2.25v9a2.25 2.25 0 002.25 2.25h15a2.25 2.25 0 002.25-2.25v-9A2.25 2.25 0 0018 6.75z" />
-                </svg>
-            ),
+            icon: <FaChartLine className="text-4xl text-green-600" />,
+            title: "Sales Strategy and Execution",
+            desc: "We create and implement customized sales strategies to increase revenue and market share.",
+            link: "/solutions/sales-strategy",
+            hoverColor: "hover:bg-red-100",
+        },
+        {
+            icon: <FaBullhorn className="text-4xl text-purple-600" />,
             title: "Targeted Advertising Campaigns",
-            desc: "Executing focused ad campaigns designed to maximize ROI and expand your reach effectively.",
+            desc: "We craft impactful ad campaigns to maximize ROI, focusing on platforms and demographics that deliver results.",
+            link: "/solutions/advertising",
+            hoverColor: "hover:bg-yellow-100",
         },
         {
-            icon: (
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 15.75L12 12m0 0l3.75 3.75M12 12V3" />
-                </svg>
-            ),
-            title: "Sales Strategy & Execution",
-            desc: "Developing and implementing sales strategies that drive measurable results and improve customer acquisition.",
-        },
-        {
-            icon: (
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 9.75h4.5v4.5h-4.5zM2.25 9.75a7.5 7.5 0 0115 0v4.5a7.5 7.5 0 01-15 0v-4.5z" />
-                </svg>
-            ),
-            title: "Data-Driven Market Research",
-            desc: "Providing actionable insights through comprehensive market analysis and performance tracking.",
-        },
-        {
-            icon: (
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5V6.75a3.75 3.75 0 10-7.5 0v3.75m-2.25 6.75h12.75a1.125 1.125 0 001.125-1.125v-4.5A1.125 1.125 0 0018.75 10.5H5.25a1.125 1.125 0 00-1.125 1.125v4.5c0 .621.504 1.125 1.125 1.125z" />
-                </svg>
-            ),
+            icon: <FaUsers className="text-4xl text-yellow-600" />,
             title: "Staff Training in Sales & Marketing",
-            desc: "Equipping your team with essential skills and knowledge to excel in sales and marketing.",
+            desc: "Our training programs improve team performance with essential skills like communication, negotiation, and lead generation.",
+            link: "/solutions/staff-training",
+            hoverColor: "hover:bg-green-100",
+        },
+        {
+            icon: <FaLightbulb className="text-4xl text-red-600" />,
+            title: "Marketing and Brand Strategy",
+            desc: "We curate marketing and branding strategies that showcase your business's unique values and build lasting loyalty.",
+            link: "/solutions/marketing-branding",
+            hoverColor: "hover:bg-purple-100",
+        },
+        {
+            icon: <FaGraduationCap className="text-4xl text-indigo-600" />,
+            title: "Business Development Programs",
+            desc: "Comprehensive programs to foster growth, innovation, and long-term success in your industry.",
+            link: "/solutions/business-development",
+            hoverColor: "hover:bg-blue-100",
         },
     ];
 
     return (
-        <>
+        <div>
             <OurExpertise />
-
-            <SectionWrapper>
-                <div
-                    ref={sectionRef}
-                    id="features"
-                    className="custom-screen text-gray-600"
-                >
-                    <h2 className="text-3xl font-extrabold text-center text-gray-800 mb-4">Other Services</h2>
-                    <ul className="grid gap-x-12 gap-y-8 sm:grid-cols-2 lg:grid-cols-3 mt-8">
-                        {features.map((item, idx) => (
-                            <li
-                                key={idx}
-                                className={`space-y-3 transform transition duration-700 ease-in-out ${
-                                    isVisible
-                                        ? "opacity-100 translate-y-0 blur-none"
-                                        : "opacity-0 translate-y-10 blur-md"
+            <div
+                ref={sectionRef}
+                style={{
+                    backgroundColor: "#f8f9fa",
+                    minHeight: "100vh",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                }}
+            >
+                <SectionWrapper>
+                    <div id="client-solutions" className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
+                        <div className="max-w-2xl mx-auto text-center">
+                            <h2
+                                className={`text-gray-800 text-3xl font-semibold sm:text-4xl transition-all duration-1000 ${
+                                    isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                                 }`}
-                                style={{
-                                    transitionDelay: `${idx * 0.3}s`,
-                                }}
                             >
-                                <div className="w-12 h-12 border text-gray-800 rounded-full flex items-center justify-center">
-                                    {item.icon}
-                                </div>
-                                <h4 className="text-lg text-gray-800 font-semibold hover:text-[#FF0000]">
-                                    {item.title}
-                                </h4>
-                                <p className="text-gray-800">{item.desc}</p>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            </SectionWrapper>
-        </>
+                                Other Services
+                            </h2>
+                        </div>
+                        <div className="mt-12">
+                            <ul className="grid gap-y-8 gap-x-12 sm:grid-cols-2 lg:grid-cols-3">
+                                {solutions.map((item, idx) => (
+                                    <li
+                                        key={idx}
+                                        className={`group relative bg-white shadow-md transition-all duration-1000 ease-in-out transform ${
+                                            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                                        } hover:-translate-y-2 overflow-hidden ${item.hoverColor}`}
+                                        style={{
+                                            borderRadius: "1rem 1rem 0 0",
+                                            height: "320px",
+                                            clipPath: "inset(0px 0px -20px 0px)",
+                                            transitionDelay: `${idx * 0.2}s`,
+                                        }}
+                                    >
+                                        <a href={item.link} className="block h-full p-6">
+                                            <div className="flex items-center gap-x-4">
+                                                <div className="flex-none w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center shadow-inner">
+                                                    {item.icon}
+                                                </div>
+                                                <h4 className="text-lg font-semibold text-gray-800 group-hover:text-red-600 transition-colors duration-300">
+                                                    {item.title}
+                                                </h4>
+                                            </div>
+                                            <p className="mt-3 text-gray-600">{item.desc}</p>
+                                        </a>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+                </SectionWrapper>
+            </div>
+        </div>
     );
 };
 

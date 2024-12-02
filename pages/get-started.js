@@ -5,11 +5,12 @@ import Checkbox from "../components/ui/Checkbox";
 
 export default function GetStarted() {
   const servicesItems = [
+    "Logistics",
     "Marketing & Brand Strategy",
     "Targeted Advertising Campaigns",
     "Sales Strategy & Execution",
     "Data-Driven Market Research",
-    "Logistics",
+   
   ];
 
   return (
@@ -38,7 +39,7 @@ export default function GetStarted() {
                   rel="noreferrer"
                   className="text-red-600 hover:text-red-400 font-medium duration-150"
                 >
-                  support@aorglobal.com
+                  support@aorglobalworld.com
                 </a>
                 , or reach us directly via WhatsApp.
               </p>

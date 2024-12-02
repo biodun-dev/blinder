@@ -40,8 +40,12 @@ const CTA = () => {
                     >
                         <Image
                             src={ctaImage}
-                            className="rounded-lg md:max-w-lg"
-                            alt="Empowering Businesses with Strategic Insights"
+                            className="rounded-lg object-cover"
+                            alt="Why Choose Us"
+                            style={{
+                                height: "600px", // Increased height
+                                width: "450px", // Adjusted width
+                            }}
                         />
                     </div>
                     <div
@@ -50,18 +54,34 @@ const CTA = () => {
                         }`}
                     >
                         <h2 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
-                            Empower Your Business with AOR Global
+                            Why Choose Us
                         </h2>
                         <p className="mt-3 text-gray-600">
-                            In partnership with AOR Global, businesses unlock growth potential through strategic insights, innovative solutions, and measurable results, ensuring success in today’s competitive landscape.
+                            At AOR Global, we pride ourselves on being more than just a service provider; we’re your trusted partner in success. Here’s why organizations choose us:
                         </p>
-                        <ul className="mt-4 list-disc list-inside text-gray-600">
-                            <li>Marketing & Brand Strategy</li>
-                            <li>Targeted Advertising Campaigns</li>
-                            <li>Sales Strategy & Execution</li>
-                            <li>Data-Driven Market Research</li>
-                            <li>Staff Training in Sales & Marketing</li>
+                        <ul className="mt-4 list-disc list-inside text-gray-600 space-y-3">
+                            <li>
+                                <strong>Expertise Across Multiple Sectors:</strong> From shipping and clearing to sales, marketing, and advertising, we offer a comprehensive range of professional services tailored to meet diverse needs.
+                            </li>
+                            <li>
+                                <strong>Proven Results:</strong> Our innovative strategies and solutions are designed to deliver measurable outcomes, helping businesses achieve and exceed their goals, including yearly revenue targets.
+                            </li>
+                            <li>
+                                <strong>Client-Centric Approach:</strong> We prioritize understanding your unique needs, ensuring every solution is customized to maximize your success.
+                            </li>
+                            <li>
+                                <strong>Timely and Reliable Service:</strong> With a strong commitment to efficiency, we ensure your projects are executed on time, every time.
+                            </li>
+                            <li>
+                                <strong>Innovative Solutions:</strong> Leveraging the latest trends and technology, we craft creative strategies that give your business a competitive edge.
+                            </li>
+                            <li>
+                                <strong>Experienced Team:</strong> Our team of dedicated professionals brings years of industry experience and passion for excellence to every project.
+                            </li>
                         </ul>
+                        <p className="mt-4 text-gray-600">
+                            Partner with AOR Global Media and experience exceptional service that drives results and elevates your business to new heights.
+                        </p>
                         <NavLink
                             href="/get-started"
                             className="inline-block mt-6 font-medium text-sm text-blue-800 bg-white border border-blue-800 hover:bg-blue-800 hover:text-white px-5 py-3 rounded-lg transition duration-150"

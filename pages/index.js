@@ -19,9 +19,11 @@ export default function Home() {
       </Head>
       <Hero />
       <LogoGrid />
+      <Features />
       <YouTubeEmbed/>
+    
       <GradientWrapper>
-        <Features />
+     
         <CTA />
       </GradientWrapper>
       < ClientSolutions/>
