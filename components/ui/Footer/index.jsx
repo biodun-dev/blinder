@@ -59,12 +59,12 @@ const Footer = () => (
     <footer className="bg-gray-900 text-white">
         <div className="custom-screen pt-16">
             <div className="mt-10 py-10 border-t border-gray-700 flex flex-col gap-y-8 sm:flex-row sm:items-start sm:justify-between">
-                {/* Address Section */}
+
                 <div className="text-center sm:text-left">
                     <h4 className="text-lg font-semibold text-gray-100 mb-2">Contact Information</h4>
-                    <p className="text-gray-400">123 AOR Global Lane</p>
-                    <p className="text-gray-400">Lagos, Nigeria</p>
-                    <p className="text-gray-400">Phone: +234 123 456 7890</p>
+                    <p className="text-gray-400">60, Allen Avenue by Adeboye Sholanke entrance</p>
+                    <p className="text-gray-400">first bank bus stop ikeja, Nigeria</p>
+                    <p className="text-gray-400">Phone: +234 803 491 2698</p>
                     <p className="text-gray-400">Email: info@aorglobalworld.com</p>
                 </div>
                 {/* Social Icons */}

@@ -44,7 +44,7 @@ export default function GetStarted() {
                 , or reach us directly via WhatsApp.
               </p>
               <a
-                href="https://wa.me/234XXXXXXXXXX" // Replace with your WhatsApp number
+                href="https://wa.me/234 803 491 2698" // Replace with your WhatsApp number
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center mt-6 text-white bg-green-500 hover:bg-green-600 px-4 py-2 rounded-lg font-medium"
