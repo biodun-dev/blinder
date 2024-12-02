@@ -80,7 +80,7 @@ const CTA = () => {
                             </li>
                         </ul>
                         <p className="mt-4 text-gray-600">
-                            Partner with AOR Global Media and experience exceptional service that drives results and elevates your business to new heights.
+                            Partner with AOR Global and experience exceptional service that drives results and elevates your business to new heights.
                         </p>
                         <NavLink
                             href="/get-started"
