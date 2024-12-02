@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 const OurExpertise = () => {
   const images = [
@@ -89,21 +90,21 @@ const OurExpertise = () => {
       </div>
 
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent flex items-center justify-start">
-        <div className="text-white px-8 py-4 max-w-3xl ml-8 font-poppins">
-          <h2 className="text-[2.5rem] font-bold mb-6">
-            {services[currentImageIndex].title}
-          </h2>
-          <p className="text-[1.14rem] leading-relaxed mb-6">
-            {services[currentImageIndex].description}
-          </p>
-          <a
-            href="/get-started"
-            className="block font-medium text-sm text-white bg-blue-600 hover:bg-black px-5 py-2 rounded-lg md:inline transition duration-300 ease-in-out transform hover:scale-105 shadow-lg no-underline"
-          >
-            Contact Us
-          </a>
-        </div>
-      </div>
+  <div className="text-white px-8 py-4 max-w-3xl ml-8 font-poppins">
+    <h2 className="text-[2.5rem] font-bold mb-6">
+      {services[currentImageIndex].title}
+    </h2>
+    <p className="text-[1.14rem] leading-relaxed mb-6">
+      {services[currentImageIndex].description}
+    </p>
+    <Link
+      href="/get-started"
+      className="block font-medium text-sm text-white bg-blue-600 hover:bg-black px-5 py-2 rounded-lg md:inline transition duration-300 ease-in-out transform hover:scale-105 shadow-lg no-underline"
+    >
+      Contact Us
+    </Link>
+  </div>
+</div>
     </div>
   );
 };
