@@ -27,7 +27,7 @@ const AboutHero = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          Welcome to <strong>AOR Global Media</strong>, your reliable partner
+          Welcome to <strong>AOR Global</strong>, your reliable partner
           in providing outstanding services across different industries.
           Established with a vision to bridge gaps and create seamless
           services, we combine innovation, expertise, and dedication to meet

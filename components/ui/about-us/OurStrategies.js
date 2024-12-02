@@ -25,7 +25,7 @@ const OurStrategies = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          At AOR Global Media, we focus on innovative strategies that empower
+          At AOR Global, we focus on innovative strategies that empower
           businesses to excel in today’s competitive markets.
         </p>
 

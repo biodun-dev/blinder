@@ -6,7 +6,7 @@ const LeadershipSection = ({ leaders }) => {
       <div className="max-w-7xl mx-auto px-6 sm:px-12 text-center">
         <h2 className="text-3xl font-bold text-gray-800">Our Leadership</h2>
         <p className="mt-4 text-gray-600 leading-relaxed">
-          Meet the visionaries and dedicated professionals who lead AOR Global Media
+          Meet the visionaries and dedicated professionals who lead AOR Global
           towards excellence.
         </p>
 
