@@ -6,8 +6,12 @@ import {
   FaDatabase,
   FaRocket,
 } from "react-icons/fa";
+import { useRef } from "react";
 
 const InsightsAndTrends = () => {
+
+  const sectionRef = useRef(null);
+
   const insights = [
     {
       icon: <FaTruck className="text-3xl text-gray-800" />,
@@ -48,7 +52,7 @@ const InsightsAndTrends = () => {
   ];
 
   return (
-    <div className="w-full bg-gray-50 py-16">
+    <div ref={sectionRef} id="insights"  className="w-full bg-gray-50 py-16">
       <div id="insights-trends" className="text-gray-600 px-6">
         <div className="text-center">
           <h2 className="text-gray-800 text-4xl font-bold sm:text-5xl">

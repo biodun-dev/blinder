@@ -58,7 +58,7 @@ const Features = () => {
             hoverColor: "hover:bg-yellow-100",
         },
         {
-            icon: <FaUsers className="text-4xl text-yellow-600" />,
+            icon: <FaUsers className="text-4xl text-red-600" />,
             title: "Staff Training in Sales & Marketing",
             desc: "Our training programs improve team performance with essential skills like communication, negotiation, and lead generation.",
             link: "/solutions/staff-training",

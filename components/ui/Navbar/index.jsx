@@ -7,12 +7,12 @@ import NavLink from "../NavLink";
 const Navbar = () => {
   const [state, setState] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const { events } = useRouter();
+  const router = useRouter();
 
   const navigation = [
-    { title: "About Us", path: "#about" },
+    { title: "About Us", path: "/about" },
     { title: "Our Services", path: "#services" },
-    { title: "Success Stories", path: "#success-stories" },
+    { title: "Success Stories", path: "#testimonials" },
     { title: "Insights & Trends", path: "#insights" },
   ];
 
@@ -21,23 +21,47 @@ const Navbar = () => {
       document.body.classList.remove("overflow-hidden");
       setState(false);
     };
-    events.on("routeChangeStart", handleState);
-    events.on("hashChangeStart", handleState);
 
-    // Detect scroll position
+    router.events.on("routeChangeStart", handleState);
+    router.events.on("hashChangeStart", handleState);
+
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0);
     };
 
     window.addEventListener("scroll", handleScroll);
+
     return () => {
+      router.events.off("routeChangeStart", handleState);
+      router.events.off("hashChangeStart", handleState);
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [router.events]);
 
   const handleNavMenu = () => {
     setState(!state);
     document.body.classList.toggle("overflow-hidden");
+  };
+
+  const handleNavigation = (path) => {
+    if (path.startsWith("#")) {
+      const sectionId = path.slice(1); // Remove the `#` to get the id
+
+      if (router.pathname === "/") {
+        // If already on the home page, scroll to the section
+        const targetElement = document.getElementById(sectionId);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: "smooth" });
+        }
+      } else {
+        // Redirect to the home page, then scroll
+        router.push(`/#${sectionId}`);
+      }
+    } else {
+      // Navigate to other pages
+      router.push(path);
+    }
   };
 
   return (
@@ -102,19 +126,21 @@ const Navbar = () => {
                   key={idx}
                   className="duration-150 text-gray-800 hover:text-gray-500 font-normal"
                 >
-                  <Link href={item.path} className="block">
+                  <button
+                    onClick={() => handleNavigation(item.path)}
+                    className="block"
+                  >
                     {item.title}
-                  </Link>
+                  </button>
                 </li>
               ))}
               <li>
-              <NavLink
-    href="/get-started"
-    className="block font-medium text-sm text-white bg-blue-600 hover:bg-black px-5 py-2 rounded-lg md:inline transition duration-300 ease-in-out transform hover:scale-105 shadow-lg no-underline"
->
-    Contact Us
-</NavLink>
-
+                <NavLink
+                  href="/get-started"
+                  className="block font-medium text-sm text-white bg-blue-600 hover:bg-black px-5 py-2 rounded-lg md:inline transition duration-300 ease-in-out transform hover:scale-105 shadow-lg no-underline"
+                >
+                  Contact Us
+                </NavLink>
               </li>
             </ul>
           </div>

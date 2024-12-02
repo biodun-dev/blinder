@@ -1,7 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect,useRef } from "react";
 import Link from "next/link";
 
 const OurExpertise = () => {
+const sectionRef = useRef(null);
   const images = [
     "/image2.jpg",
     "/image10.jpg",
@@ -71,7 +72,13 @@ const OurExpertise = () => {
   }, [images.length]);
 
   return (
-    <div className="relative h-screen w-full overflow-hidden">
+    <div  ref={sectionRef}
+    id="services" className="relative h-screen w-full overflow-hidden">
+      <div className="bg-white text-center py-6 shadow-md z-20 relative">
+        <h1 className="text-4xl font-bold text-gray-800">Our Services</h1>
+      </div>
+
+      {/* Background Slideshow */}
       <div
         className="absolute top-0 left-0 w-full h-full flex transition-transform duration-1000"
         style={{
@@ -89,22 +96,26 @@ const OurExpertise = () => {
         ))}
       </div>
 
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent flex items-center justify-start">
-  <div className="text-white px-8 py-4 max-w-3xl ml-8 font-poppins">
-    <h2 className="text-[2.5rem] font-bold mb-6">
-      {services[currentImageIndex].title}
-    </h2>
-    <p className="text-[1.14rem] leading-relaxed mb-6">
-      {services[currentImageIndex].description}
-    </p>
-    <Link
-  href="/get-started"
-  className="inline-block w-auto font-medium text-sm text-white bg-blue-600 hover:bg-black px-5 py-2 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg no-underline"
->
-  Contact Us
-</Link>
-  </div>
-</div>
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+
+      {/* Dynamic Text */}
+      <div className="absolute inset-0 flex items-center justify-start">
+        <div className="text-white px-8 py-4 max-w-3xl ml-8 font-poppins">
+          <h2 className="text-[2.5rem] font-bold mb-6">
+            {services[currentImageIndex].title}
+          </h2>
+          <p className="text-[1.14rem] leading-relaxed mb-6">
+            {services[currentImageIndex].description}
+          </p>
+          <Link
+            href="/get-started"
+            className="inline-block w-auto font-medium text-sm text-white bg-blue-600 hover:bg-black px-5 py-2 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg no-underline"
+          >
+            Contact Us
+          </Link>
+        </div>
+      </div>
     </div>
   );
 };
