@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import SectionWrapper from "../../SectionWrapper";
+import OurExpertise from "../logistics/index"; // Adjust the path to where OurExpertise is located
 
 const Features = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -27,15 +28,6 @@ const Features = () => {
     }, []);
 
     const features = [
-        {
-            icon: (
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 3h18M3 6l3 14a2 2 0 002 2h8a2 2 0 002-2l3-14M5.5 10h13" />
-                </svg>
-            ),
-            title: "Logistics",
-            desc: "Streamlining supply chain processes with reliable and efficient logistics solutions tailored to your business needs.",
-        },
         {
             icon: (
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -84,41 +76,42 @@ const Features = () => {
     ];
 
     return (
-        <SectionWrapper>
-            <div
-                ref={sectionRef}
-                id="features"
-                className="custom-screen text-gray-600"
-            >
-                <h2 className="text-3xl font-extrabold text-center text-gray-800 mb-4">Our Expertise</h2>
-                <p className="text-center text-gray-800">
-                    Driving growth through innovative solutions and tailored strategies.
-                </p>
-                <ul className="grid gap-x-12 gap-y-8 sm:grid-cols-2 lg:grid-cols-3 mt-8">
-                    {features.map((item, idx) => (
-                        <li
-                            key={idx}
-                            className={`space-y-3 transform transition duration-700 ease-in-out ${
-                                isVisible
-                                    ? "opacity-100 translate-y-0 blur-none"
-                                    : "opacity-0 translate-y-10 blur-md"
-                            }`}
-                            style={{
-                                transitionDelay: `${idx * 0.3}s`,
-                            }}
-                        >
-                            <div className="w-12 h-12 border text-gray-800 rounded-full flex items-center justify-center">
-                                {item.icon}
-                            </div>
-                            <h4 className="text-lg text-gray-800 font-semibold hover:text-[#FF0000]">
-                                {item.title}
-                            </h4>
-                            <p className="text-gray-800">{item.desc}</p>
-                        </li>
-                    ))}
-                </ul>
-            </div>
-        </SectionWrapper>
+        <>
+            <OurExpertise />
+
+            <SectionWrapper>
+                <div
+                    ref={sectionRef}
+                    id="features"
+                    className="custom-screen text-gray-600"
+                >
+                    <h2 className="text-3xl font-extrabold text-center text-gray-800 mb-4">Other Services</h2>
+                    <ul className="grid gap-x-12 gap-y-8 sm:grid-cols-2 lg:grid-cols-3 mt-8">
+                        {features.map((item, idx) => (
+                            <li
+                                key={idx}
+                                className={`space-y-3 transform transition duration-700 ease-in-out ${
+                                    isVisible
+                                        ? "opacity-100 translate-y-0 blur-none"
+                                        : "opacity-0 translate-y-10 blur-md"
+                                }`}
+                                style={{
+                                    transitionDelay: `${idx * 0.3}s`,
+                                }}
+                            >
+                                <div className="w-12 h-12 border text-gray-800 rounded-full flex items-center justify-center">
+                                    {item.icon}
+                                </div>
+                                <h4 className="text-lg text-gray-800 font-semibold hover:text-[#FF0000]">
+                                    {item.title}
+                                </h4>
+                                <p className="text-gray-800">{item.desc}</p>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </SectionWrapper>
+        </>
     );
 };
 

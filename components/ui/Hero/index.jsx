@@ -38,7 +38,7 @@ const Hero = () => {
                 : "opacity-0 blur-md translate-y-10"
             }`}
           >
-            Empowering Growth Through Innovation
+       Empowering Growth Through Innovation
           </h1>
 
           {/* Subheadline */}
@@ -49,7 +49,7 @@ const Hero = () => {
                 : "opacity-0 blur-md translate-y-10"
             }`}
           >
-            Discover data-driven strategies, seamless logistics, and tailored solutions designed for your business success.
+            Discover seamless logistics, data-driven strategies, and tailored solutions designed for your business success.
           </p>
 
           {/* Buttons */}

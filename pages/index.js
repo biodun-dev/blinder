@@ -10,6 +10,7 @@ import InsightsAndTrends from "../components/ui/Insights";
 import YouTubeEmbed from "../components/ui/YouTubeEmbed";
 import ClientSolutions from "../components/ui/ClientSolutions"
 
+
 export default function Home() {
   return (
     <>
