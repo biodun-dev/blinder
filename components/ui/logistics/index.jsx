@@ -66,7 +66,7 @@ const sectionRef = useRef(null);
       setTranslateX(
         (prevTranslateX) => (prevTranslateX - 100) % (images.length * 100)
       );
-    }, 5000);
+    }, 8000);
 
     return () => clearInterval(interval);
   }, [images.length]);
