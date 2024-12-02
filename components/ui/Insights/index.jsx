@@ -64,14 +64,14 @@ const InsightsAndTrends = () => {
           </p>
         </div>
         <div className="mt-16 relative group">
-          {/* Top gradient overlay - Disabled on mobile */}
+
           <div className="absolute top-0 h-24 w-full bg-gradient-to-b from-gray-50 via-gray-50/90 to-transparent z-10 pointer-events-none transition-opacity duration-300 group-hover:opacity-0 sm:block hidden"></div>
 
-          {/* Horizontal gradient overlays - Disabled on mobile */}
+
           <div className="absolute top-0 left-0 h-full w-24 bg-gradient-to-r from-gray-50 via-gray-50/90 to-transparent z-10 pointer-events-none sm:block hidden"></div>
           <div className="absolute top-0 right-0 h-full w-24 bg-gradient-to-l from-gray-50 via-gray-50/90 to-transparent z-10 pointer-events-none sm:block hidden"></div>
 
-          {/* Scrolling content */}
+
           <div className="overflow-hidden w-full hide-scrollbar relative">
             <div className="flex gap-x-8 animate-marquee whitespace-nowrap flex-nowrap w-max">
               {insights.map((item, idx) => (
