@@ -78,26 +78,38 @@ const LeadershipSection = ({ leaders }) => {
             <div
               key={index}
               style={{
-                backgroundColor: "white",
-                boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-                borderRadius: "0.75rem",
                 opacity: inView ? 1 : 0,
                 transform: inView ? "translateY(0)" : "translateY(20px)",
                 transition: `opacity 1s ease-in ${index * 200}ms, transform 1s ease-in ${index * 200}ms`,
               }}
             >
-              <img
-                src={leader.image}
-                alt={`${leader.name}'s photo`}
+              <div
                 style={{
                   width: "100%",
-                  height: "24rem",
-                  objectFit: "cover",
-                  borderTopLeftRadius: "0.75rem",
-                  borderTopRightRadius: "0.75rem",
+                  height: "28rem", // Fixed height for consistency
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  overflow: "hidden", // Ensures the image stays inside bounds
+                  backgroundColor: "#f9fafb", // Add background to avoid gaps
                 }}
-              />
-              <div style={{ padding: "1.5rem" }}>
+              >
+                <img
+                  src={leader.image}
+                  alt={`${leader.name}'s photo`}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover", // Ensures images fill the container proportionally
+                  }}
+                />
+              </div>
+              <div
+                style={{
+                  padding: "1.5rem",
+                  textAlign: "center",
+                }}
+              >
                 <h3
                   style={{
                     fontSize: "1.25rem",
