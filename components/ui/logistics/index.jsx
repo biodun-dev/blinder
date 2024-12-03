@@ -136,11 +136,25 @@ const OurExpertise = () => {
 
       {/* Right Arrow for Larger Screens */}
       <button
-        className="hidden md:block absolute right-8 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white p-6 rounded-full hover:bg-red-600 transition duration-300 z-30 text-4xl animate-bounce"
-        onClick={moveToNextImage}
-      >
-        &#9654;
-      </button>
+  className="hidden md:block absolute right-8 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white p-6 rounded-full hover:bg-red-600 transition duration-300 z-30 text-4xl animate-bounce"
+  onClick={moveToNextImage}
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    className="w-6 h-6"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      d="M9 5l7 7-7 7"
+    />
+  </svg>
+</button>
+
     </div>
   );
 };
