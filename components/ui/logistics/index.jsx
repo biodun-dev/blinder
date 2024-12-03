@@ -33,7 +33,7 @@ const OurExpertise = () => {
     {
       title: "Warehousing and Distribution",
       description:
-        "Our warehousing and distribution services offer seamless storage and delivery solutions to keep your supply chain running smoothly. With state-of-the-art facilities, your goods are in safe hands.",
+        "Our warehousing and distribution services offer seamless storage and delivery solutions to keep your supply chain running smoothly. With state Of the-art facilities, your goods are in safe hands.",
     },
     {
       title: "Integrated Logistics",
