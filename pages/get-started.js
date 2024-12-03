@@ -34,12 +34,12 @@ export default function GetStarted() {
                 explore how we can help with innovative marketing, logistics, and
                 sales strategies tailored to your goals. Email us at{" "}
                 <a
-                  href="mailto:support@aorglobal.com"
+                  href="mailto:info@aorglobalworld.com"
                   target="_blank"
                   rel="noreferrer"
                   className="text-red-600 hover:text-red-400 font-medium duration-150"
                 >
-                  support@aorglobalworld.com
+                  info@aorglobalworld.com
                 </a>
                 , or reach us directly via WhatsApp.
               </p>

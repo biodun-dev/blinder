@@ -35,12 +35,12 @@ export default function PartnerWithUs() {
                 marketing, logistics, and sales strategies tailored to your
                 business needs. Email us at{" "}
                 <a
-                  href="mailto:partners@aorglobal.com"
+                  href="mailto:info@aorglobalworld.com"
                   target="_blank"
                   rel="noreferrer"
                   className="text-red-600 hover:text-red-400 font-medium duration-150"
                 >
-                  partners@aorglobalworld.com
+                  info@aorglobalworld.com
                 </a>
                 , or contact us directly through the form below.
               </p>
