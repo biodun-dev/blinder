@@ -86,12 +86,12 @@ const LeadershipSection = ({ leaders }) => {
               <div
                 style={{
                   width: "100%",
-                  height: "28rem", // Fixed height for consistency
+                  height: "28rem",
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  overflow: "hidden", // Ensures the image stays inside bounds
-                  backgroundColor: "#f9fafb", // Add background to avoid gaps
+                  overflow: "hidden",
+                  backgroundColor: "#f9fafb", 
                 }}
               >
                 <img
