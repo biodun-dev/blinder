@@ -61,7 +61,7 @@ const CTA = () => {
                         </p>
                         <ul className="mt-4 list-disc list-inside text-gray-600 space-y-3">
                             <li>
-                                <strong>Expertise Across Multiple Sectors:</strong> From shipping and clearing to sales, marketing, and advertising, we offer a comprehensive range of professional services tailored to meet diverse needs.
+                                <strong>Technical Expertise Across Multiple Sectors:</strong> From shipping and clearing to sales, marketing, and advertising, we offer a comprehensive range of professional services tailored to meet diverse needs.
                             </li>
                             <li>
                                 <strong>Proven Results:</strong> Our innovative strategies and solutions are designed to deliver measurable outcomes, helping businesses achieve and exceed their goals, including yearly revenue targets.

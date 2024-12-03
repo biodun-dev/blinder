@@ -1,8 +1,8 @@
-import { useState, useEffect,useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 
 const OurExpertise = () => {
-const sectionRef = useRef(null);
+  const sectionRef = useRef(null);
   const images = [
     "/image2.jpg",
     "/image10.jpg",
@@ -11,7 +11,7 @@ const sectionRef = useRef(null);
     "/image3.jpg",
     "/image12.jpg",
     "/image5.jpg",
-    "/image4.jpg",
+    "/image7.jpg",
   ];
 
   const services = [
@@ -26,7 +26,7 @@ const sectionRef = useRef(null);
         "Sea freight offers cost-effective solutions for bulk and international shipping needs. We ensure seamless global connectivity with precision and reliability. Empower your business with logistics that drive success.",
     },
     {
-      title: "Custom Brokerage",
+      title: "Customs Brokerage",
       description:
         "Seamless customs clearance services simplify international trade, ensuring compliance and hassle-free transactions. Trust us to handle your documentation and regulatory requirements with expertise.",
     },
@@ -62,23 +62,31 @@ const sectionRef = useRef(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-      setTranslateX(
-        (prevTranslateX) => (prevTranslateX - 100) % (images.length * 100)
-      );
+      moveToNextImage();
     }, 8000);
 
     return () => clearInterval(interval);
-  }, [images.length]);
+  }, [currentImageIndex]);
+
+  const moveToNextImage = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    setTranslateX((prevTranslateX) =>
+      (prevTranslateX - 100) % (images.length * 100)
+    );
+  };
 
   return (
-    <div  ref={sectionRef}
-    id="services" className="relative h-screen w-full overflow-hidden">
+    <div
+      ref={sectionRef}
+      id="services"
+      className="relative h-screen w-full overflow-hidden"
+    >
+      {/* Header */}
       <div className="bg-white text-center py-6 shadow-md z-20 relative">
         <h1 className="text-4xl font-bold text-gray-800">Our Services</h1>
       </div>
 
-      {/* Background Slideshow */}
+      {/* Carousel */}
       <div
         className="absolute top-0 left-0 w-full h-full flex transition-transform duration-1000"
         style={{
@@ -108,14 +116,31 @@ const sectionRef = useRef(null);
           <p className="text-[1.14rem] leading-relaxed mb-6">
             {services[currentImageIndex].description}
           </p>
-          <Link
-            href="/get-started"
-            className="inline-block w-auto font-medium text-sm text-white bg-blue-600 hover:bg-black px-5 py-2 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg no-underline"
-          >
-            Contact Us
-          </Link>
+          {/* Contact Us and Circular Button Row */}
+          <div className="flex items-center justify-between mt-4">
+            <Link
+              href="/get-started"
+              className="inline-block font-medium text-sm text-white bg-blue-600 hover:bg-black px-5 py-2 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg no-underline"
+            >
+              Contact Us
+            </Link>
+            <button
+              className="block md:hidden w-12 h-12 flex items-center justify-center bg-blue-600 text-white rounded-full hover:bg-blue-500 transition duration-300 shadow-lg"
+              onClick={moveToNextImage}
+            >
+              <span className="text-2xl">&#10140;</span> {/* Unicode for → */}
+            </button>
+          </div>
         </div>
       </div>
+
+      {/* Right Arrow for Larger Screens */}
+      <button
+        className="hidden md:block absolute right-8 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white p-6 rounded-full hover:bg-red-600 transition duration-300 z-30 text-4xl animate-bounce"
+        onClick={moveToNextImage}
+      >
+        &#9654;
+      </button>
     </div>
   );
 };

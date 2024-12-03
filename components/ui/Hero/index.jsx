@@ -61,14 +61,14 @@ const Hero = () => {
             }`}
           >
         <NavLink
-  href="/services"
+  href=""
   className="bg-[#DC143C] text-white hover:bg-[#C11235] px-5 sm:px-6 py-3 sm:py-4 rounded-full transition-all duration-300 transform hover:-translate-y-1 shadow-lg"
 >
   Explore Services
 </NavLink>
 
             <NavLink
-              href="/case-studies"
+              href=""
               className="bg-gradient-to-br from-blue-100 via-blue-200 to-blue-300 text-blue-700 hover:from-blue-200 hover:to-blue-400 hover:text-blue-800 px-5 sm:px-6 py-3 sm:py-4 rounded-full transition-all duration-300 transform hover:-translate-y-1 shadow-lg"
             >
               View Case Studies

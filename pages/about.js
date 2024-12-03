@@ -8,19 +8,19 @@ import CTA from "../components/ui/CTA";
 const AboutUs = () => {
   const leaders = [
     {
-      name: "John Doe",
-      role: "CEO & Founder",
-      image: "/bezos.jpeg", // Replace with actual image paths
+      name: "Ridwan Oladayo",
+      role: "Head Of Operations",
+      image: "/operations.jpeg", 
     },
     {
-      name: "Jane Smith",
-      role: "Chief Marketing Officer",
-      image: "/bezos.jpeg",
+      name: "Abdulquadri Abisola",
+      role: "Team Lead",
+      image: "/teamlead.jpeg",
     },
     {
-      name: "Michael Lee",
-      role: "Operations Manager",
-      image: "/bezos.jpeg", 
+      name: "Aderounmu Lateef",
+      role: "IT Officer",
+      image: "/IT.jpeg", 
     },
   ];
 

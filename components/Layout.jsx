@@ -6,7 +6,7 @@ const Layout = ({ children }) => {
     return (
         <>
             <Head>
-                <title>AOR Global - Empowering Strategic Growth</title>
+                <title>AOR Global</title>
                 <meta
                     name="description"
                     content="AOR Global empowers businesses with data-driven strategies, innovative solutions, and measurable results to thrive in a competitive landscape."

@@ -1,42 +1,37 @@
-import SectionWrapper from "../../SectionWrapper"
+import SectionWrapper from "../../SectionWrapper";
+
 const Testimonials = () => {
     const testimonials = [
         {
-            avatar: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
             name: "Chidi Nwosu",
-            title: "Logistics Manager at TransitPro",
-            quote: "AOR Global revolutionized my business operations with tailored strategies and expert logistics solutions. We’ve streamlined processes and seized new growth opportunities like never before."
+            title: "Freight Logistics Manager",
+            quote: "AOR Global helped us optimize our freight operations, reducing transit times and ensuring seamless cargo movement. Their expertise has been invaluable in meeting tight deadlines."
         },
         {
-            avatar: "https://images.unsplash.com/photo-1558435607-cbdbea18350b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
             name: "Kemi Adeyemi",
-            title: "Marketing Strategist",
-            quote: "Thanks to AOR Global, we optimized our logistics and marketing strategies, achieving measurable results. Our operations are now seamless, and our sales have seen a substantial increase."
+            title: "Customs Clearance Specialist",
+            quote: "Thanks to AOR Global, our freight logistics processes are now more efficient than ever. Their team provided tailored solutions that simplified complex shipments and saved costs."
         },
         {
-            avatar: "https://images.unsplash.com/photo-1563122870-6bfeb71ddf31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
             name: "Bisi Onyekachi",
-            title: "Operations Consultant",
-            quote: "Working with AOR Global was a game changer. Their data-driven insights and logistics expertise allowed us to streamline operations and achieve sustainable success."
+            title: "Supply Chain Coordinator",
+            quote: "AOR Global provided strategic freight solutions that transformed our supply chain. We’ve significantly minimized delays and achieved consistent operational success."
         },
         {
-            avatar: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
             name: "Aisha Suleiman",
-            title: "Supply Chain Specialist",
-            quote: "AOR Global helped us build a solid logistics framework and marketing strategies that not only saved us time but also uncovered new opportunities for growth."
+            title: "Freight Forwarding Specialist",
+            quote: "AOR Global’s logistics expertise has been a game changer for us. Their ability to streamline freight processes and ensure compliance has made our operations worry-free."
         },
         {
-            avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
             name: "Tunde Owolabi",
-            title: "Business Development Lead at InnovateNaija",
-            quote: "In a challenging business environment, AOR Global provided the expertise we needed to optimize our logistics and marketing. The results have been phenomenal, even in tough times."
+            title: "Logistics and Transportation Manager",
+            quote: "AOR Global’s innovative freight logistics strategies have allowed us to handle complex routes with ease. Their commitment to excellence is unmatched."
         },
         {
-            avatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
             name: "Ngozi Okafor",
-            title: "E-Commerce Operations Manager",
-            quote: "We were struggling with inefficient logistics and marketing. AOR Global’s tailored solutions transformed our business, helping us scale and achieve long-term success."
-        }
+            title: "E-Commerce Logistics Lead",
+            quote: "AOR Global optimized our freight logistics framework, ensuring reliable last-mile deliveries and improving our overall efficiency. Their impact has been phenomenal."
+        },
     ];
 
     return (
@@ -44,10 +39,10 @@ const Testimonials = () => {
             <div id="testimonials" className="max-w-screen-xl mx-auto px-4 md:px-8">
                 <div className="max-w-2xl sm:text-center md:mx-auto">
                     <h2 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
-                        See What Others Are Saying About Us
+                        See What Our Clients Are Saying
                     </h2>
                     <p className="mt-3 text-gray-600">
-                        Discover how we’ve helped businesses streamline operations, embrace growth, and achieve measurable success.
+                        Discover how AOR Global has empowered businesses with tailored freight logistics solutions that drive results.
                     </p>
                 </div>
                 <div className="mt-12">
@@ -56,7 +51,6 @@ const Testimonials = () => {
                             <li key={idx} className="bg-white border p-4 rounded-xl">
                                 <figure>
                                     <div className="flex items-center gap-x-4">
-                                        <img src={item.avatar} className="w-14 h-14 object-cover rounded-full" alt={item.name} />
                                         <div>
                                             <span className="block text-gray-800 font-semibold">{item.name}</span>
                                             <span className="block text-gray-600 text-sm mt-0.5">{item.title}</span>
@@ -78,3 +72,4 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
+    
