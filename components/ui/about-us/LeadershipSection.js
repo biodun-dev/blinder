@@ -1,31 +1,120 @@
 "use client";
 
+import { useEffect, useState, useRef } from "react";
+
 const LeadershipSection = ({ leaders }) => {
+  const [inView, setInView] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+        }
+      },
+      { threshold: 0.2 } // Trigger when 20% of the section is in view
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <div className="bg-gray-50 py-16">
-      <div className="max-w-7xl mx-auto px-6 sm:px-12 text-center">
-        <h2 className="text-3xl font-bold text-gray-800">Our Leadership</h2>
-        <p className="mt-4 text-gray-600 leading-relaxed">
+    <div
+      ref={sectionRef}
+      style={{ backgroundColor: "#f9fafb", padding: "4rem 0" }}
+    >
+      <div
+        style={{
+          maxWidth: "80rem",
+          margin: "0 auto",
+          padding: "0 1.5rem",
+          textAlign: "center",
+        }}
+      >
+        <h2
+          style={{
+            fontSize: "1.875rem",
+            fontWeight: "bold",
+            color: "#1f2937",
+            opacity: inView ? 1 : 0,
+            transform: inView ? "translateY(0)" : "translateY(20px)",
+            transition: "opacity 1s ease-in, transform 1s ease-in",
+          }}
+        >
+          Our Leadership
+        </h2>
+        <p
+          style={{
+            marginTop: "1rem",
+            color: "#6b7280",
+            lineHeight: "1.75",
+            opacity: inView ? 1 : 0,
+            transform: inView ? "translateY(0)" : "translateY(20px)",
+            transition: "opacity 1s ease-in 200ms, transform 1s ease-in 200ms",
+          }}
+        >
           Meet the visionaries and dedicated professionals who lead AOR Global
           towards excellence.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-12">
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+            gap: "3rem",
+            marginTop: "3rem",
+          }}
+        >
           {leaders.map((leader, index) => (
             <div
               key={index}
-              className="bg-white shadow-lg rounded-lg"
+              style={{
+                backgroundColor: "white",
+                boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+                borderRadius: "0.75rem",
+                opacity: inView ? 1 : 0,
+                transform: inView ? "translateY(0)" : "translateY(20px)",
+                transition: `opacity 1s ease-in ${index * 200}ms, transform 1s ease-in ${index * 200}ms`,
+              }}
             >
               <img
                 src={leader.image}
                 alt={`${leader.name}'s photo`}
-                className="w-full h-96 object-cover rounded-t-lg"
+                style={{
+                  width: "100%",
+                  height: "24rem",
+                  objectFit: "cover",
+                  borderTopLeftRadius: "0.75rem",
+                  borderTopRightRadius: "0.75rem",
+                }}
               />
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800">
+              <div style={{ padding: "1.5rem" }}>
+                <h3
+                  style={{
+                    fontSize: "1.25rem",
+                    fontWeight: "bold",
+                    color: "#1f2937",
+                  }}
+                >
                   {leader.name}
                 </h3>
-                <p className="text-gray-600 mt-2">{leader.role}</p>
+                <p
+                  style={{
+                    marginTop: "0.5rem",
+                    color: "#6b7280",
+                  }}
+                >
+                  {leader.role}
+                </p>
               </div>
             </div>
           ))}

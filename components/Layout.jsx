@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
                     content="AOR Global empowers businesses with data-driven strategies, innovative solutions, and measurable results to thrive in a competitive landscape."
                 />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/faviconn.ico" />
             </Head>
             <Navbar />
             <main>{children}</main>
