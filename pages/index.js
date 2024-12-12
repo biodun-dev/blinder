@@ -17,20 +17,20 @@ export default function Home() {
       <Head>
         <meta name='robots' content='index' />
       </Head>
-      <Hero />
+      {/* <Hero /> */}
       {/* <LogoGrid /> */}
-      <Features />
+      {/* <Features /> */}
       {/* <YouTubeEmbed/> */}
     
-      <GradientWrapper>
+      {/* <GradientWrapper>
      
         <CTA />
-      </GradientWrapper>
-      < ClientSolutions/>
+      </GradientWrapper> */}
+      {/* < ClientSolutions/>
       <InsightsAndTrends />
       <GradientWrapper>
         <Testimonials />
-      </GradientWrapper>
+      </GradientWrapper> */}
       <FooterCTA />
     </>
   );
