@@ -26,13 +26,13 @@ const AboutUs = () => {
 
   return (
     <div className="bg-gray-100 min-h-screen pt-24">
-      <AboutHero />
+      {/* <AboutHero />
       <OurStrategies />
-      <LeadershipSection leaders={leaders} />
+      <LeadershipSection leaders={leaders} /> */}
 
-      <div className="pb-16">
+      {/* <div className="pb-16">
         <CTA />
-      </div>
+      </div> */}
     </div>
   );
 };
