@@ -18,7 +18,7 @@ export default function Home() {
         <meta name='robots' content='index' />
       </Head>
       <Hero />
-      <LogoGrid />
+      {/* <LogoGrid /> */}
       <Features />
       {/* <YouTubeEmbed/> */}
     
