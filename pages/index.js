@@ -17,21 +17,21 @@ export default function Home() {
       <Head>
         <meta name='robots' content='index' />
       </Head>
-      {/* <Hero /> */}
-      {/* <LogoGrid /> */}
-      {/* <Features /> */}
+      <Hero />
+      <LogoGrid />
+      <Features />
       {/* <YouTubeEmbed/> */}
     
-      {/* <GradientWrapper>
+      <GradientWrapper>
      
         <CTA />
-      </GradientWrapper> */}
-      {/* < ClientSolutions/>
+      </GradientWrapper>
+     < ClientSolutions/>
       <InsightsAndTrends />
       <GradientWrapper>
         <Testimonials />
-      </GradientWrapper> */}
-      {/* <FooterCTA /> */}
+      </GradientWrapper> 
+      <FooterCTA />
     </>
   );
 }

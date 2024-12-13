@@ -5,7 +5,7 @@ import Navbar from "./ui/Navbar";
 const Layout = ({ children }) => {
     return (
         <>
-            {/* <Head>
+            <Head>
                 <title>AOR Global</title>
                 <meta
                     name="description"
@@ -13,10 +13,10 @@ const Layout = ({ children }) => {
                 />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/faviconn.ico" />
-            </Head> */}
-            {/* <Navbar /> */}
-            {/* <main>{children}</main> */}
-            {/* <Footer /> */}
+            </Head>
+            <Navbar />
+            <main>{children}</main>
+            <Footer />
         </>
     );
 };
