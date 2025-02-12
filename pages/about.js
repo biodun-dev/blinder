@@ -7,11 +7,11 @@ import CTA from "../components/ui/CTA";
 
 const AboutUs = () => {
   const leaders = [
-    {
-      name: "Ridwan Oladayo",
-      role: "Head Of Operations",
-      image: "/operations.jpeg", 
-    },
+    // {
+    //   name: "Ridwan Oladayo",
+    //   role: "Head Of Operations",
+    //   image: "/operations.jpeg", 
+    // },
     {
       name: "Abdulquadri Abisola",
       role: "Team Lead",

@@ -64,7 +64,7 @@ const Footer = () => (
                     <h4 className="text-lg font-semibold text-gray-100 mb-2">Contact Information</h4>
                     <p className="text-gray-400">60, Allen Avenue by Adeboye Sholanke entrance</p>
                     <p className="text-gray-400">first bank bus stop ikeja, Nigeria</p>
-                    <p className="text-gray-400">Phone: +234 803 491 2698</p>
+                    <p className="text-gray-400">Phone: +234 805 039 9302</p> 
                     <p className="text-gray-400">Email: info@aorglobalworld.com</p>
                 </div>
                 {/* Social Icons */}
