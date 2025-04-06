@@ -62,8 +62,8 @@ const Footer = () => (
 
                 <div className="text-center sm:text-left">
                     <h4 className="text-lg font-semibold text-gray-100 mb-2">Contact Information</h4>
-                    <p className="text-gray-400">60, Allen Avenue by Adeboye Sholanke entrance</p>
-                    <p className="text-gray-400">first bank bus stop ikeja, Nigeria</p>
+                    <p className="text-gray-400"> 65b opebi,</p>
+                    <p className="text-gray-400">Ikeja Lagos, Nigeria</p>
                     <p className="text-gray-400">Phone: +234 805 039 9302</p> 
                     <p className="text-gray-400">Email: info@aorglobalworld.com</p>
                 </div>
@@ -84,7 +84,7 @@ const Footer = () => (
                 </div>
                 {/* Footer Text */}
                 <div className="text-center sm:text-right">
-                    <p className="text-gray-400">© 2024 AOR Global. All rights reserved.</p>
+                    <p className="text-gray-400">© 2025 AOR Global. All rights reserved.</p>
                 </div>
             </div>
         </div>
